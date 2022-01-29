@@ -66,8 +66,9 @@ for old in glob.glob(os.path.join(oldbook, '*.xlsx')):
             with open(txtsheet, mode='a',encoding='utf-8', newline="\n") as t:
                 t.write(oldfile+"and"+newfile+":Not match number of sheets\n")
                 t.close()
+                
         else:
             pass
-print("compare diff done!")
+print("it's done. success compare diff ")
 
 
