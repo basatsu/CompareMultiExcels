@@ -8,8 +8,7 @@
 
 import xlrd 
 from pathlib import Path
-import glob,os,re
-import openpyxl
+import glob,os,re,openpyxl
 from itertools import zip_longest
 
 oldbook = input('Old folder pass:')
