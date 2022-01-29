@@ -68,6 +68,7 @@ for old in glob.glob(os.path.join(oldbook, '*.xlsx')):
                 t.close()
         else:
             pass
+print("Completed")
 print("compare diff done!")
 
 
