@@ -27,19 +27,16 @@ for old in glob.glob(os.path.join(oldbook, '*.xlsx')):
         if oldfile==newfile and rb1.nsheets == rb2.nsheets:
             wb = openpyxl.Workbook()
             outfile=os.path.splitext(os.path.basename(old))[0]
-        
             txt=outtext+"\\"+outfile+"_diff.txt"
             with open(txt, mode='a',encoding='utf-8', newline="\n") as f:
                 f.write(oldfile+"and"+newfile+"\n")
                 f.close() 
             for shnum in range(max(rb1.nsheets, rb2.nsheets)):  
                 sheet1 = rb1.sheet_by_index(shnum) 
-                sheet2 = rb2.sheet_by_index(shnum)          
-            
+                sheet2 = rb2.sheet_by_index(shnum)            
                 with open(txt, mode='a',encoding='utf-8', newline="\n") as f:
                     f.write(rb1.sheet_by_index(shnum).name+"\n")
                     f.close()   
-
                 newsheet=wb.create_sheet(title=rb1.sheet_by_index(shnum).name,index=shnum)
                 #new file has less rows than old file
                 if sheet1.nrows > sheet2.nrows:
