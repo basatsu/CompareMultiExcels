@@ -6,9 +6,8 @@
 #in case same file name and not same sheets (outsheet)
 #output to _SheetDiff.txt
 
-import xlrd 
+import xlrd,glob,os,re,openpyxl
 from pathlib import Path
-import glob,os,re,openpyxl
 from itertools import zip_longest
 
 oldbook = input('Old folder pass:')
