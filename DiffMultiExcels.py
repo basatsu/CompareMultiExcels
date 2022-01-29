@@ -30,7 +30,7 @@ for old in glob.glob(os.path.join(oldbook, '*.xlsx')):
         
             txt=outtext+"\\"+outfile+"_diff.txt"
             with open(txt, mode='a',encoding='utf-8', newline="\n") as f:
-                f.write(oldfile+"と"+newfile+"\n")
+                f.write(oldfile+"and"+newfile+"\n")
                 f.close() 
             for shnum in range(max(rb1.nsheets, rb2.nsheets)):  
                 sheet1 = rb1.sheet_by_index(shnum) 
@@ -72,6 +72,6 @@ for old in glob.glob(os.path.join(oldbook, '*.xlsx')):
                 t.close()
         else:
             pass
-print("Successful compare diff")
+print("compare diff done!")
 
 
