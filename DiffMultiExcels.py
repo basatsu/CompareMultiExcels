@@ -3,7 +3,7 @@
 #in case same file name and same sheets
 #_diff.txt shows where diff is. result outputs to  _diff.xlsx
 
-#in case same file name and not same sheets (outsheet)
+#in case same file name and not the same number of sheets 
 #output to _SheetDiff.txt
 
 import xlrd,glob,os,re,openpyxl
