@@ -12,9 +12,9 @@ from itertools import zip_longest
 
 oldbook = input('Old folder pass:')
 newbook = input('New folder pass:')
-output = input('Output diff.xlsx to which folder pass:')
-outtext = input('Output diff.txt to which folder pass:')
-outsheet = input('Sheets diff to output:')
+output = input('Diff cell to xlsx:')
+outtext = input('Diffs to text output:')
+outsheet = input('Sheets diff to text output:')
 
 for old in glob.glob(os.path.join(oldbook, '*.xlsx')): 
     for new in glob.glob(os.path.join(newbook, '*.xlsx')):
