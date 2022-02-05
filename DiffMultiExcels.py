@@ -14,7 +14,7 @@ oldbook = input('Old folder pass:')
 newbook = input('New folder pass:')
 output = input('Output diff.xlsx to which folder pass:')
 outtext = input('Output diff.txt to which folder pass:')
-outsheet = input('Which folder pass(when not same sheets):')
+outsheet = input('Sheets diff to output:')
 
 for old in glob.glob(os.path.join(oldbook, '*.xlsx')): 
     for new in glob.glob(os.path.join(newbook, '*.xlsx')):
