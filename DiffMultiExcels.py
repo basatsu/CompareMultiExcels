@@ -10,8 +10,8 @@ import xlrd,glob,os,re,openpyxl
 from pathlib import Path
 from itertools import zip_longest
 
-oldbook = input('Old folder pass:')
-newbook = input('New folder pass:')
+oldbook = input('Old folderPath:')
+newbook = input('New folderPath:')
 output = input('Diff cell to xlsx:')
 outtext = input('Diffs to text output:')
 outsheet = input('Sheets diff to text output:')
